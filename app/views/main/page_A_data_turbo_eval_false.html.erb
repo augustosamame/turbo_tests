@@ -1,0 +1,30 @@
+<h1>Page_A with data_turbo_eval = false</h1>
+<%= link_to "Navigate to Page B with data_turbo_eval = false", main_page_B_data_turbo_eval_false_path %>
+
+<script data-turbo-eval="false">
+
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log('PAGE A DOMContentLoaded');
+  })
+
+  document.addEventListener("turbo:visit", function () {
+    console.log('PAGE A turbo:visit');
+  });
+
+  document.addEventListener("turbo:before-cache", function () {
+    console.log('PAGE A turbo:before-cache');
+  });
+
+  document.addEventListener("turbo:before-render", function () {
+    console.log('PAGE A turbo:before-render');
+  });
+
+  document.addEventListener("turbo:render", function () {
+    console.log('PAGE A turbo:render');
+  });
+
+  document.addEventListener("turbo:load", function () {
+    console.log('PAGE A turbo:load');
+  });
+
+</script>
